@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGPV - 3rd Semester Exam Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 10px;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .result-display {
+            font-size: 22px;
+            color: green;
+            font-weight: bold;
+        }
+        input, button {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV) - 3rd Semester Results
+    </header>
+    <div class="content">
+        <h2>Check Your 3rd Semester Exam Result</h2>
+        <p>Enter your roll number:</p>
+        <input type="text" id="rollNumber" placeholder="e.g., 1234567">
+        <button onclick="checkResult()">Submit</button>
+        <p class="result-display" id="resultDisplay"></p>
+    </div>
+    <script>
+        function checkResult() {
+            let roll = document.getElementById("rollNumber").value;
+            if (roll) {
+                document.getElementById("resultDisplay").innerText = 
+                    "Result: Passed with Distinction (CGPA: 9.9)";
+            } else {
+                document.getElementById("resultDisplay").innerText = "Please enter a valid roll number.";
+            }
+        }
+    </script>
+</body>
+</html>
